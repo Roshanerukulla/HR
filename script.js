@@ -1,11 +1,11 @@
-document.getElementById('heart').addEventListener('click', function() {
-    document.getElementById('heart').style.display = 'none';
-    document.getElementById('explosion').style.display = 'block';
+const heart = document.getElementById('heart');
+const loveMessage = document.getElementById('love-message');
 
-    setTimeout(function() {
-        document.getElementById('explosion').style.display = 'none';
-        alert("I love you!");
-        // You can replace the alert with any other action you desire
-        // For example, you can dynamically add a message to the DOM.
-    }, 1000); // Adjust the timeout based on the explode animation duration
+heart.addEventListener('click', () => {
+  heart.classList.add('explode');
+  loveMessage.style.display = 'block';
 });
+
+setTimeout(() => {
+  heart.classList.remove('explode');
+}, 1000); // Adjust explosion duration
