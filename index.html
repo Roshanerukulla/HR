@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
-    <title>Love Explosion</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Explosion</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div id="heartContainer">
-        <div id="heart"></div>
-        <div id="explosion"></div>
-    </div>
-
+  <div id="heart-container">
+    <svg id="heart" viewBox="-20 -20 40 40">
+      <path d="M10,5 C7.1340086,5 4.5,7.3660086 3,10.5 C1.5,13.6340086 0,17.5 0,22 C0,29 5,35 10,35 C15,35 20,29 20,22 C20,17.5 18.5,13.6340086 16,10.5 C14.5,7.3660086 11.8660086,5 10,5 Z" />
+    </svg>
+  </div>
+  <p id="love-message" style="display: none;">I love you!</p>
+  <script src="script.js"></script>
 </body>
 </html>
