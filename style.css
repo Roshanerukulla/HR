@@ -1,28 +1,62 @@
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f8f8f8;
-  }
-  
-  .heart {
-    width: 100px;
-    height: 90px;
-    background-color: #ff5060;
-    position: relative;
-    transform: rotate(-45deg);
-    animation: pulse 2s infinite alternate;
-    cursor: pointer;
-  }
-  
-  @keyframes pulse {
-    0% {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(to bottom, #660000, #330000); /* Metallic red background */
+  color: #fff; /* Text color */
+}
+
+#heartContainer {
+  position: relative;
+  width: 200px; /* Adjust the size of the heart-shaped container */
+  height: 200px;
+}
+
+button {
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #ff8080; /* Romantic button color */
+  color: #fff; /* Text color */
+  padding: 15px;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button svg {
+  width: 30px; /* Adjust the size of the heart icon */
+  height: 30px;
+  margin-right: 8px;
+}
+
+#heart {
+  width: 150px; /* Adjust the size of the heart */
+  height: 135px;
+  background-image: url('heart.png'); /* Add your heart image */
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
       transform: scale(1);
-    }
-    100% {
-      transform: scale(1.1);
-    }
   }
-  
+  50% {
+      transform: scale(1.1);
+  }
+}
+
+.hidden {
+  display: none;
+}
